@@ -1,4 +1,3 @@
-
 import matplotlib
 from urllib import request 
 import json
@@ -12,27 +11,21 @@ base_url = "http://covid19-india-adhikansh.herokuapp.com/states"
 raw_data = request.urlopen(base_url)
 data = json.load(raw_data)
 for i in data['state']:
-    cases[i['name']] = i['active']
     active.append(i['active'])
     death.append(i['death'])
     total.append(i['total'])
-labels = list(cases.keys())
-x =np.arange(0,770,22)
+
+labels = ['A&N Islnads','Andhra P','Arunanchal P','Assam','Bihar','Chandigarh','Chhattisgarh','Daman & Diu','Delhi','Goa','Gujarat','Haryana','HP','J&K','Jharkhand','Karnataka','Kerala','Ladakh','MP','Maharashtra','Manipur','Meghalaya','Mizoram','Nagaland','Odisha','Puducherry','Punjab','Rajasthan','Sikkim','Tamil Nadu','Telegana','Tripura','Uttarakhand','UP','West Bengal']
+x =np.arange(0,875,25)
 f,ax=plt.subplots(figsize=(50,15))
 width = 2.0
-plt.xticks(x,labels[1:])
-plt.bar(x-18,total[1:],width,color='red',label='Total Cases')
-plt.bar(x-16,active[1:],width,color='green',label='Active Cases',align='edge')
-plt.bar(x-14,death[1:],width,color='black',label='Deceased',align='edge')
+plt.xticks(x,labels[:35])
+plt.bar(x-4,total[:35],width,color='red',label='Total Cases')
+plt.bar(x,active[:35],width,color='green',label='Active Cases')
+plt.bar(x+4,death[:35],width,color='black',label='Deceased')
 plt.title('Covid-19 Statistics')
 plt.ylabel('Cases')
 plt.xlabel('States')
 plt.legend()
 plt.autoscale(True)
 plt.show()
-
-
-
-
-
-
