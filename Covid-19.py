@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[51]:
-
 
 import matplotlib
 from urllib import request 
@@ -39,14 +34,6 @@ plt.autoscale(True)
 plt.show()
 
 
-# In[30]:
-
-
-import matplotlib.pyplot as plt
-help(plt)
-
-
-# In[ ]:
 
 
 
