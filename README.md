@@ -1,2 +1,0 @@
-# covid-19-stats-statewise(INDIA)
-In this python script I used an open-source api to collect data using the library urllib and the module request from urllib. Then I used JSON module in python to convert response object into json file from there i retrieved all the data that i needed into seprate lists and then I started to plot the bar graph. If anyone know how to make the graph bigger then do raise an issue. 
