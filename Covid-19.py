@@ -11,9 +11,7 @@ total = []
 base_url = "http://covid19-india-adhikansh.herokuapp.com/states"
 raw_data = request.urlopen(base_url)
 data = json.load(raw_data)
-# print('State    Total    Active    Cured    Deaths')
 for i in data['state']:
-#     print(i['name'],i['total'],i['active'],i['cured'],i['death'])
     cases[i['name']] = i['active']
     active.append(i['active'])
     death.append(i['death'])
