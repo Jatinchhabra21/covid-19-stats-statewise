@@ -4,4 +4,4 @@ states then it will be because the data was not present on the api used in the s
 The API link - http://covid19-india-adhikansh.herokuapp.com/states
 
 
-###For any questions raise an issue.###
+The API doesnt work anymore.
